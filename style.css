@@ -345,7 +345,6 @@ body {
 }
 
 .banner .banner__container {
-  height: 256px;
   width: 1080px;
 }
 
@@ -367,8 +366,7 @@ body {
   background-color: #ffffff;
   border-radius: 4px;
   padding: 30px;
-  width: 100%;
-  height: 100px;
+  height: fit-content;
   display: flex;
   gap: 30px;
   align-items: center;
@@ -385,19 +383,19 @@ body {
 
 .finder__container-type {
   padding: 10px;
-  width: 30rem;
+  width: 20%;
 }
 
 .finder__container-status {
   padding: 10px;
-  width: 20rem;
+  width: 20%;
 }
 
 .finder__container-keywords {
   color: #646464;
   cursor: text;
   padding-left: 1rem;
-  width: 60rem;
+  width: 60%;
 }
 
 .input-label {
@@ -1466,5 +1464,76 @@ body {
 
   .nav-open-btn {
     display: block;
+  }
+
+  .finder__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .finder__container-type {
+    width: 100%;
+  }
+
+  .finder__container-status {
+    width: 100%;
+  }
+
+  .finder__container-keywords {
+    width: 100%;
+  }
+
+  .properties {
+    height: 200vh;
+    margin-bottom: 10rem;
+  }
+
+  .grid {
+    gap: 4rem 8rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .seller-container {
+    left: 270px;
+    top: 6150px;
+  }
+
+  .price {
+    margin-top: 10px;
+  }
+
+  .circle {
+    height: 30px;
+    width: 30px;
+  }
+
+  .deal__property-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .property__features-deal > img {
+    height: 2rem;
+  }
+
+  .agents-grid {
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .agencie-wrapper {
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .articles-wrapper {
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .values-wrapper {
+    gap: 2rem;
+    flex-wrap: wrap;
   }
 }
