@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/92a663fd42.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>CasaRoyal</title>
+  </head>
+  <body>
+    <!--
+        - #HEADER
+     -->
+    <header class="header" data-header>
+      <div class="header__register">
+        <p class="header__register-contact">
+          <span class="header__register-address">
+            1441 Market St, San Francisco</span
+          >
+          <span class="header__register-tel">(123) 456-7890</span>
+          <span class="header__register-hours">Mon - Sun: 8:00am - 6:00pm</span>
+        </p>
+        <button class="login-btn">login/register</button>
+      </div>
+      <nav class="navbar">
+        <a href="#" class="logo">
+          <img src="./assets/logo.svg" width="32" alt="" />
+          <p class="logo-text">casa<span>Royal</span></p>
+        </a>
+        <ul class="links">
+          <div class="links_left">
+            <li>homepage</li>
+            <li>properties</li>
+            <li>agencies</li>
+            <li>pages</li>
+            <li>about</li>
+            <li>contact</li>
+          </div>
+          <div class="links-right">
+            <li>compare</li>
+          </div>
+        </ul>
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
+        </button>
+        <i class="fa-regular fa-heart"></i>
+        <button class="submit-listing">submit listing</button>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <!-- 
+                #BANNER
+            -->
+        <section
+          class="banner"
+          style="background-image: url('./assets/hero-bg-image.png')"
+        >
+          <div class="banner__container">
+            <h2 class="banner__container-title">Let Us Gide You Home</h2>
+            <p class="banner__container-text">Find the house of your dreams</p>
+            <form id="bannerForm" class="finder__container">
+              <div class="finder__container-type hero-input">
+                <p class="input-label">Type</p>
+                <select
+                  class="input-select"
+                  name="property-type"
+                  id="propertyType"
+                >
+                  <option value="">Select Type</option>
+                  <option value="house">house</option>
+                  <option value="apartment">Apartment</option>
+                </select>
+              </div>
+              <div class="finder__container-status hero-input">
+                <p class="input-label">Status</p>
+                <select
+                  class="input-select"
+                  name="property-status"
+                  id="propertyStatus"
+                >
+                  <option value="">Select Status</option>
+                  <option value="sale">Sale</option>
+                  <option value="rent">Rent</option>
+                </select>
+              </div>
+              <input
+                class="finder__container-keywords hero-input"
+                type="text"
+                name="property-keywords"
+                id="propertyKeywords"
+                placeholder="Searh for properties, suburbs or keywords…"
+              />
+              <button class="finder__container-btn" type="submit">
+                find properties
+              </button>
+            </form>
+          </div>
+        </section>
+
+        <!--
+                #FEATURED-PROPERTY
+            -->
+        <section class="section properties">
+          <div class="section-header">
+            <p class="section-text">CASAROYAL REAL STATE AGENCY</p>
+            <h2 class="section-title"><span>Featured</span> Properties</h2>
+          </div>
+          <div id="propertyGrid" class="grid"></div>
+          <button id="allProperties" class="btn btn-primary">
+            <span class="text text-1">all properties</span>
+            <span class="text text-2" aria-hidden="true">all properties</span>
+          </button>
+          <div data-overlay class="overlay">
+            <div data-modal class="property__modal"></div>
+          </div>
+        </section>
+
+        <!--
+                #DEAL
+        -->
+        <section class="section deal-property">
+          <div class="section-header">
+            <p class="section-text">CASAROYAL REAL STATE AGENCY</p>
+            <h2 class="section-title"><span>Hot</span> Deal</h2>
+          </div>
+          <div
+            class="deal__property"
+            style="background-image: url('./assets/deal-property-image.png')"
+          >
+            <div class="deal__property-left"><span>Photos (4)</span></div>
+            <div class="deal__property-right">
+              <p class="residential-tower">Residential Towe For Rent</p>
+              <p class="apartment">15 Apartments of Type B</p>
+              <p class="location">Los Angeles, CA</p>
+              <p class="price">From $1,700.00 Per Month</p>
+              <div class="circle"></div>
+              <div class="deal__property-features">
+                <div class="property__features-deal">
+                  <img src="./assets/area-icon-deal.svg" alt="" />
+                  <p class="area-text">
+                    <span>1600</span>
+                    <span>Sq Ft</span>
+                  </p>
+                </div>
+                <div class="property__features-deal">
+                  <img src="./assets/bedroom-icon-deal.svg" alt="" />
+                  <p class="area-text">
+                    <span>2</span>
+                    <span>Beds</span>
+                  </p>
+                </div>
+                <div class="property__features-deal">
+                  <img src="./assets/bathroom-icon-deal.svg" alt="" />
+                  <p class="area-text">
+                    <span>1</span>
+                    <span>Bath</span>
+                  </p>
+                </div>
+                <div class="property__features-deal">
+                  <img src="./assets/garage-icon-deal.svg" alt="" />
+                  <p class="area-text">
+                    <span>1</span>
+                    <span>Garage</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--
+            #PROPERTY BY AREA
+        -->
+        <section class="section properties-by-area">
+          <header class="section-header">
+            <p class="section-text">CASAROYAL REAL STATE AGENCY</p>
+            <h2 class="section-title"><span>Properties</span> by Area</h2>
+          </header>
+          <div class="property-by-area__container">
+            <div class="first-row">
+              <div class="location-1">
+                <img
+                  src="./assets/properties-by-area/slice-1.png"
+                  alt="Los Angeles"
+                />
+                <div class="property-by-area__label">
+                  <p class="label-title">Los Angeles</p>
+                  <p class="label-text">24 Properties</p>
+                </div>
+              </div>
+              <div class="location-2">
+                <img
+                  src="./assets/properties-by-area/slice-2.png"
+                  alt="San Francisco"
+                />
+                <div class="property-by-area__label">
+                  <p class="label-title">San Francisco</p>
+                  <p class="label-text">19 Properties</p>
+                </div>
+              </div>
+            </div>
+            <div class="second-row">
+              <div class="location-2">
+                <img
+                  src="./assets/properties-by-area/slice-3.png"
+                  alt="Seattle"
+                />
+                <div class="property-by-area__label">
+                  <p class="label-title">Seattle</p>
+                  <p class="label-text">13 Properties</p>
+                </div>
+              </div>
+              <div class="location-1">
+                <img
+                  src="./assets/properties-by-area/slice-4.png"
+                  alt="San Diego"
+                />
+                <div class="property-by-area__label">
+                  <p class="label-title">San Diego</p>
+                  <p class="label-text">1 Properties</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--
+            #AGENTS
+        -->
+        <section class="section agents">
+          <div class="section-header">
+            <p class="section-text">MEET OUR TEAM</p>
+            <h2 class="section-title"><span>Our</span> Agents</h2>
+          </div>
+          <div id="agentsGrid" class="agents-grid"></div>
+          <div class="nav-wrapper">
+            <img
+              class="navigation"
+              src="./assets/agents/navigation.svg"
+              alt=""
+            />
+          </div>
+        </section>
+
+        <!--
+            #SELLER
+        -->
+        <section class="seller">
+          <img class="seller-img" src="./assets/hero-bg-image.png" alt="" />
+          <div class="seller-container">
+            <p class="seller-title">
+              Want to Sell <br />
+              Property?
+            </p>
+            <p class="seller-text">
+              Let us create a tailored strategic marketing plan and keep track
+              of the selling process.
+            </p>
+            <button class="btn btn-primary">
+              <span class="text text-1">more details</span>
+              <span class="text text-2" aria-hidden="true">more details</span>
+            </button>
+          </div>
+        </section>
+
+        <!--
+            #AGENCIES
+        -->
+        <section class="section agencie">
+          <div class="section-header">
+            <p class="section-text">MEET OUR TEAM</p>
+            <h2 class="section-title"><span>Real State</span> Agencies</h2>
+          </div>
+          <div class="agencie-wrapper">
+            <div class="agencie-card">
+              <div class="stats">
+                <div class="stats__left">
+                  <img
+                    src="./assets/agencies/verified-icon.svg"
+                    alt=""
+                    class="stats__left-verified"
+                  />
+                  <p class="verified">Verified</p>
+                </div>
+                <p class="stats__right">4.5</p>
+              </div>
+              <img
+                src="./assets/agencies/logo-1.svg"
+                alt=""
+                class="agencie__img"
+              />
+              <div class="location-wrapper">
+                <img src="./assets/agencies/flag.svg" alt="" />
+                <p class="agencie__location">San Francisco, USA</p>
+              </div>
+              <p class="agencie__name">ProHouse</p>
+              <p class="agencie__phone">123 456 7890</p>
+              <p class="agencie__email">agency@email.com</p>
+              <button class="agencie-btn">3 Properties</button>
+            </div>
+            <div class="agencie-card">
+              <div class="stats">
+                <div class="stats__left">
+                  <img
+                    src="./assets/agencies/verified-icon.svg"
+                    alt=""
+                    class="stats__left-verified"
+                  />
+                  <p class="verified">Verified</p>
+                </div>
+                <p class="stats__right">4.5</p>
+              </div>
+              <img
+                src="./assets/agencies/logo-2.svg"
+                alt=""
+                class="agencie__img"
+              />
+              <div class="location-wrapper">
+                <img src="./assets/agencies/flag.svg" alt="" />
+                <p class="agencie__location">San Francisco, USA</p>
+              </div>
+              <p class="agencie__name">ProHouse</p>
+              <p class="agencie__phone">123 456 7890</p>
+              <p class="agencie__email">agency@email.com</p>
+              <button class="agencie-btn">3 Properties</button>
+            </div>
+            <div class="agencie-card">
+              <div class="stats">
+                <div class="stats__left">
+                  <img
+                    src="./assets/agencies/verified-icon.svg"
+                    alt=""
+                    class="stats__left-verified"
+                  />
+                  <p class="verified">Verified</p>
+                </div>
+                <p class="stats__right">4.5</p>
+              </div>
+              <img
+                src="./assets/agencies/logo-3.svg"
+                alt=""
+                class="agencie__img"
+              />
+              <div class="location-wrapper">
+                <img src="./assets/agencies/flag.svg" alt="" />
+                <p class="agencie__location">San Francisco, USA</p>
+              </div>
+              <p class="agencie__name">ProHouse</p>
+              <p class="agencie__phone">123 456 7890</p>
+              <p class="agencie__email">agency@email.com</p>
+              <button class="agencie-btn">3 Properties</button>
+            </div>
+          </div>
+        </section>
+
+        <!--
+            #ARTICLES
+        -->
+        <section class="section articles">
+          <div class="section-header">
+            <p class="section-text">CASAROYAL NEWS</p>
+            <h2 class="section-title"><span>Articles</span> & Tips</h2>
+          </div>
+          <div class="articles-wrapper">
+            <div class="article__card">
+              <img
+                src="./assets/articles/image-1.png"
+                alt=""
+                class="article__img"
+              />
+              <div class="article__details">
+                <p class="article__category">Category</p>
+                <p class="article__title">BUYING A HOME</p>
+                <div class="line"></div>
+                <div class="article-time-released">
+                  <img src="./assets/articles/time-icon.svg" alt="" />
+                  <p>DECEMBER 28, 2018</p>
+                </div>
+              </div>
+            </div>
+            <div class="article__card">
+              <img
+                src="./assets/articles/image-2.png"
+                alt=""
+                class="article__img"
+              />
+              <div class="article__details">
+                <p class="article__category">Category</p>
+                <p class="article__title">BUYING A HOME</p>
+                <div class="line"></div>
+                <div class="article-time-released">
+                  <img src="./assets/articles/time-icon.svg" alt="" />
+                  <p>DECEMBER 28, 2018</p>
+                </div>
+              </div>
+            </div>
+            <div class="article__card">
+              <img
+                src="./assets/articles/image-3.png"
+                alt=""
+                class="article__img"
+              />
+              <div class="article__details">
+                <p class="article__category">Category</p>
+                <p class="article__title">BUYING A HOME</p>
+                <div class="line"></div>
+                <div class="article-time-released">
+                  <img src="./assets/articles/time-icon.svg" alt="" />
+                  <p>DECEMBER 28, 2018</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-primary">
+            <span class="text text-1">MORE ARTICLES & TIPS</span>
+            <span class="text text-2" aria-hidden="true"
+              >MORE ARTICLES & TIPS</span
+            >
+          </button>
+        </section>
+
+        <!--
+            #VALUES 
+        -->
+        <section class="section values">
+          <div class="section-header">
+            <p class="section-text">CASAROYAL REAL STATE AGENCY</p>
+            <h2 class="section-title"><span>Our</span> Values</h2>
+          </div>
+          <div class="values-wrapper">
+            <div class="values__card">
+              <i class="fa-regular fa-comment blue-icon"></i>
+              <p class="values__title">Ensuring clear communication</p>
+              <p class="values__text">
+                We keep you in the loop every step of the way. You can rely on a
+                transparent, comprehensible flow of information.
+              </p>
+            </div>
+            <div class="values__card">
+              <i class="fa-regular fa-paper-plane blue-icon"></i>
+              <p class="values__title">Making the most of technology</p>
+              <p class="values__text">
+                Time is precious. We guarantee a high degree of efficiency and a
+                premium level of service by using the right tools.
+              </p>
+            </div>
+            <div class="values__card">
+              <i class="fa-regular fa-heart blue-icon"></i>
+              <p class="values__title">Providing excellent customer service</p>
+              <p class="values__text">
+                We are passionate about what we do and we take pride in
+                achieving the personalised results that you have in mind.
+              </p>
+            </div>
+          </div>
+          <button class="btn btn-primary">
+            <span class="text text-1">READ MORE</span>
+            <span class="text text-2" aria-hidden="true">READ MORE</span>
+          </button>
+        </section>
+
+        <!-- 
+            #TESTIMONIALS
+        -->
+        <section
+          class="section testimonials"
+          style="
+            background-image: url('./assets/testimonials/testimonials-bg-1.png');
+          "
+        >
+          <div class="section-header">
+            <p class="section-text testimonials-header-text">CLIENTS REVIEWS</p>
+            <h2 class="section-title testimonials-header-title">
+              <span>What</span> Our Clients Say
+            </h2>
+          </div>
+          <div class="testimonial__container">
+            <p class="testimonial__container-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              eleifend nunc sem, sit amet luctus tellus tempus tempor. Interdum
+              et malesuada fames ac ante ipsum primis in faucibus.
+            </p>
+            <div class="testimonial__container-author">
+              <div class="author">
+                <img src="./assets/testimonials/user.png" alt="" />
+                <div class="author-info">
+                  <p class="author-name">ALAN POE</p>
+                  <p class="author-location">SAN FRANCISCO</p>
+                </div>
+              </div>
+              <div class="testimonial__container-author-right">
+                <div><i class="fa-solid fa-arrow-left"></i></div>
+                <div><i class="fa-solid fa-arrow-right"></i></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--
+            #FOOTER
+        -->
+        <footer class="footer">
+          <div class="footer-header">
+            <a href="#" class="logo footer-logo">
+              <img src="./assets/logo.svg" width="35" alt="" />
+              <p class="logo-text">casa<span>Royal</span></p>
+            </a>
+            <div class="footer-header-right">
+              <div class="icon-container">
+                <i class="fa-brands fa-facebook-f"></i>
+              </div>
+              <div class="icon-container">
+                <i class="fa-brands fa-twitter"></i>
+              </div>
+              <div class="icon-container">
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+              <div class="icon-container">
+                <i class="fa-brands fa-pinterest-p"></i>
+              </div>
+            </div>
+          </div>
+          <div class="footer-grid">
+            <div class="menu">
+              <p class="menu-title">INFORMATION</p>
+              <p class="menu-text">Our Contacts</p>
+              <p class="menu-text">Privacy Policy</p>
+              <p class="menu-text">terms and Conditions</p>
+              <p class="menu-text">FAQs</p>
+            </div>
+            <div class="menu">
+              <p class="menu-title">PROPERTIES</p>
+              <p class="menu-text">House</p>
+              <p class="menu-text">Office</p>
+              <p class="menu-text">Residential</p>
+              <p class="menu-text">Residential Tower</p>
+            </div>
+            <div class="menu">
+              <p class="menu-title">LOCATIONS</p>
+              <p class="menu-text">Beverly Hills</p>
+              <p class="menu-text">Los Angeles</p>
+              <p class="menu-text">Mission Viejo</p>
+              <p class="menu-text">Newport Beach</p>
+              <p class="menu-text">Pasadena</p>
+            </div>
+            <div class="menu">
+              <p class="menu-title">USEFULL LINKS</p>
+              <p class="menu-text">Blog</p>
+              <p class="menu-text">Our Contacts</p>
+              <p class="menu-text">Submit Listing</p>
+              <p class="menu-text">Support</p>
+            </div>
+            <div class="menu">
+              <p class="menu-title">ABOUT CASAROYAL</p>
+              <p class="menu-text">
+                casaRoyal - Premium Real Estate WordPress Theme by FantasyThemes
+              </p>
+              <p class="menu-text">
+                111 Wall Stree, USA, New York +1 (234) 567 8900
+              </p>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p class="copyright">
+              &copy; 2023 casaRoyal. All Rights Reserved | Crafted by
+              <a
+                href="https://github.com/andresdvelez"
+                target="_blank"
+                class="link"
+                >andresdvelez</a
+              >
+            </p>
+            <div class="footer__bottom-right">
+              <p class="bottom-right-text">Privacy Policy</p>
+              <p class="bottom-right-text">Terms and Conditions</p>
+              <p class="bottom-right-text">Contact Us</p>
+            </div>
+          </div>
+        </footer>
+      </article>
+    </main>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+{
+  "property": [
+    {
+      "id": 1,
+      "type": "house",
+      "status": "rent",
+      "img": "../assets/property-image.png",
+      "price": "$320,000.00",
+      "location": "Beverly Hills, CA",
+      "owner": {
+        "name": "Hellen Mattis",
+        "timeReleased": "4 months ago"
+      },
+      "area": "2400 Sq Ft",
+      "garage": "2",
+      "bathroom": "3",
+      "bedroom": "3"
+    },
+    {
+      "id": 2,
+      "type": "house",
+      "status": "sale",
+      "img": "../assets/property-image-2.png",
+      "price": "$320,000.00",
+      "location": "Beverly Hills, CA",
+      "owner": {
+        "name": "Hellen Mattis",
+        "timeReleased": "4 months ago"
+      },
+      "area": "2400 Sq Ft",
+      "garage": "2",
+      "bathroom": "3",
+      "bedroom": "3"
+    },
+    {
+      "id": 3,
+      "type": "house",
+      "status": "rent",
+      "img": "../assets/property-image-3.png",
+      "price": "$320,000.00",
+      "location": "Beverly Hills, CA",
+      "owner": {
+        "name": "Hellen Mattis",
+        "timeReleased": "4 months ago"
+      },
+      "area": "2400 Sq Ft",
+      "garage": "2",
+      "bathroom": "3",
+      "bedroom": "3"
+    },
+    {
+      "id": 4,
+      "description": "summer house for rent",
+      "type": "house",
+      "status": "sale",
+      "img": "../assets/property-image-4.png",
+      "price": "$320,000.00",
+      "location": "Beverly Hills, CA",
+      "owner": {
+        "name": "Hellen Mattis",
+        "timeReleased": "4 months ago"
+      },
+      "area": "2400 Sq Ft",
+      "garage": "2",
+      "bathroom": "3",
+      "bedroom": "3"
+    },
+    {
+      "id": 5,
+      "type": "apartment",
+      "status": "sale",
+      "img": "../assets/property-image-5.png",
+      "price": "$320,000.00",
+      "location": "Beverly Hills, CA",
+      "owner": {
+        "name": "Hellen Mattis",
+        "timeReleased": "4 months ago"
+      },
+      "area": "2400 Sq Ft",
+      "garage": "2",
+      "bathroom": "3",
+      "bedroom": "3"
+    },
+    {
+      "id": 6,
+      "type": "apartment",
+      "status": "sale",
+      "img": "../assets/property-image-6.png",
+      "price": "$320,000.00",
+      "location": "Beverly Hills, CA",
+      "owner": {
+        "name": "Hellen Mattis",
+        "timeReleased": "4 months ago"
+      },
+      "area": "2400 Sq Ft",
+      "garage": "2",
+      "bathroom": "3",
+      "bedroom": "3"
+    }
+  ],
+  "agents": [
+    {
+      "id": 1,
+      "img": "../assets/agents/agent-1.png",
+      "name": "JOHN DOE",
+      "job": "Real Estate Broker",
+      "phone": "123 456 7890",
+      "email": "agent@gmail.com"
+    },
+    {
+      "id": 2,
+      "img": "../assets/agents/agent-2.png",
+      "name": "JANE DOE",
+      "job": "Real Estate Broker",
+      "phone": "123 456 7890",
+      "email": "agent@gmail.com"
+    },
+    {
+      "id": 3,
+      "img": "../assets/agents/agent-3.png",
+      "name": "JOHN DOE",
+      "job": "Real Estate Broker",
+      "phone": "123 456 7890",
+      "email": "agent@gmail.com"
+    }
+  ]
+}
